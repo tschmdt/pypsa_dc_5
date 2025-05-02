@@ -5,6 +5,7 @@ q_nom,float,MVar,0,Nominal reactive power for limits in optimization.,Input (opt
 q_min,float,MVar,-inf,Minimum reactive power output.,Input (optional)
 q_max,float,MVar,inf,Maximum reactive power output.,Input (optional)
 q_set,static or series,MVar,0.,reactive power set point (for PF),Input (optional)
+p_set,static or series,MW,0.0,Active power setpoint (usually 0),Input (optional)
 sign,float,n/a,1,power sign,Input (optional)
 carrier,string,n/a,n/a,"Prime mover energy carrier (e.g. coal, gas, wind, solar); required for global constraints on primary energy in optimization.",Input (optional)
 marginal_cost,static or series,currency/MVar,0.,Marginal cost of production of 1 MVar.,Input (optional)
@@ -13,3 +14,4 @@ v_target,static or series,per unit,1,"Target voltage magnitude at bus.",Input (o
 control,string,n/a,PQ,"Control strategy for VSC must be ""PQ"" or ""PV"".",Input (optional)
 p,series,MW,0.,active power at bus (usually 0),Output
 q,series,MVar,0.,reactive power at bus,Output
+active,boolean,n/a,True,Whether to consider the component in basic functionality or not,Input (optional)

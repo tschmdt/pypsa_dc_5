@@ -17,10 +17,12 @@ netz.add("Generator", "Gen 1", bus="Bus 1", p_set=100, control="Slack")
 netz.add("Load", "Load 2", bus="Bus 2", p_set=100)
 
 # Voltage Source Converter (VSC)
-netz.add("ControllableVSC", "VSC 1", bus="Bus 2")
+netz.add("ControllableVSC", "VSC 1", bus="Bus 2", q_set=50)
 
 # Power Flow
 netz.pf()
 
 # Ergebnisse anzeigen
 print(netz.buses_t.v_mag_pu)
+
+netz.export_to_netcdf("netz.nc")
