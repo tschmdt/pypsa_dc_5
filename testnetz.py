@@ -11,13 +11,16 @@ netz.add("Bus", "Bus 2", v_nom=110)
 netz.add("Line", "1-2", bus0="Bus 1", bus1="Bus 2", x=0.05, r=0.01)
 
 # Generator (Slack)
-netz.add("Generator", "Gen 1", bus="Bus 1", p_set=100, control="Slack")
+netz.add("Generator", "Gen 1", bus="Bus 1", p_set=200, control="Slack")
 
 # Last
 netz.add("Load", "Load 2", bus="Bus 2", p_set=100)
 
+# Link
+netz.add("Link", "Link 1", bus0="Bus 1", bus1="Bus 2", p_set=30, efficiency=0.9)
+
 # Voltage Source Converter (VSC)
-netz.add("ControllableVSC", "VSC 1", bus="Bus 2", q_set=50)
+netz.add("ControllableVSC", "VSC 1", bus="Bus 2", q_set=20)
 
 # Power Flow
 netz.pf()
@@ -26,3 +29,5 @@ netz.pf()
 print(netz.buses_t.v_mag_pu)
 
 netz.export_to_netcdf("netz.nc")
+
+import IPython; IPython.embed()  # startet interaktive Python-Shell für einfache Analyse

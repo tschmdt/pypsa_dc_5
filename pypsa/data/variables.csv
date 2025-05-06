@@ -27,3 +27,6 @@ StorageUnit,state_of_charge,False,False,False,True,False,False
 StorageUnit,p_nom,False,False,False,False,True,False
 StorageUnit,n_mod,False,False,False,False,False,True
 StorageUnit,spill,False,False,True,False,False,True
+ControllableVSC,p,True,True,False,False,False,False
+ControllableVSC,q,True,False,False,False,False,False
+ControllableVSC,q_set,False,False,False,False,False,False

@@ -125,7 +125,7 @@ def add_component_type(
             typ
         )
 
-    # Initialize Component
+    # Initialize Component #ts: each key corresponds to a components list_name and the value is a ComponenType object containing metadata about the components
     all_components[list_name] = ComponentType(
         name=name,
         list_name=list_name,

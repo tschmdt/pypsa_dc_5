@@ -49,7 +49,7 @@ def imag(X: pd.Series) -> pd.Series:
 
 
 @deprecated_common_kwargs
-def _allocate_pf_outputs(n: Network, linear: bool = False) -> None:
+def _allocate_pf_outputs(n: Network, linear: bool = False) -> None:  # independent of linear true/false: this part is executed
     to_allocate = {
         "Generator": ["p"],
         "Load": ["p"],
@@ -60,9 +60,10 @@ def _allocate_pf_outputs(n: Network, linear: bool = False) -> None:
         "Line": ["p0", "p1"],
         "Transformer": ["p0", "p1"],
         "Link": ["p" + col[3:] for col in n.links.columns if col[:3] == "bus"],
+        "ControllableVSC": ["p"], # VSC should only contribute reactive power, which is "added" in the next part on basis of p here
     }
 
-    if not linear:
+    if not linear:                # if linear case: linear=true and this part is skipped
         for component, attrs in to_allocate.items():
             if "p" in attrs:
                 attrs.append("q")
