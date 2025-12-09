@@ -64,7 +64,6 @@ pyasn1-modules==0.4.2
 pyparsing==3.2.3
 pyproj==3.7.1
 pyproject-hooks==1.2.0
-pypsa==0.0.post1.dev2970+g512389175.d20251209
 readme-renderer==44.0
 requests-oauthlib==2.0.0
 requests-toolbelt==1.0.0
