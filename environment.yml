@@ -110,26 +110,9 @@ dependencies:
   - packaging
   
   # Linter, Formatierer & Spyder (Optional, aber beibehalten)
-  - flake8
-  - black
-  - isort
-  - autopep8
-  - pycodestyle
-  - pyflakes
-  - rope
-  - rich
-  - docstring-to-markdown
-  - keyring
-  - whatthepatch
   
   # GUI-Komponenten
-  - qt-webengine
-  - pyqtwebengine
-  - qtawesome
-  - qdarkstyle
-  - qtconsole
-  - qtpy
-  - sip
+
 
 
 
