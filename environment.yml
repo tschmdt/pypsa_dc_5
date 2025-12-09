@@ -1,4 +1,4 @@
-name: pypsa_dc_5
+name: pypsa_hybrid
 channels:
   - conda-forge
   - defaults
@@ -137,6 +137,7 @@ dependencies:
   - qtconsole
   - qtpy
   - sip
+
 
 
 
