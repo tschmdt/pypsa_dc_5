@@ -1,4 +1,4 @@
-name: pypsa_core_2
+name: pypsa_core_3
 channels:
   - conda-forge
   - defaults
